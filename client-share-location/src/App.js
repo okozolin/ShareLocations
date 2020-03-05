@@ -1,12 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {List} from "./components/list/list.component";
+
 import './App.css';
 
 function App() {
-  return (
+
+    const tmpLocations = ['Tel Aviv', 'Ramat Gan', 'Jerusalem']
+
+    const [locations, setLocations] = useState([]);
+
+    return (
     <div className="App">
       <header className="App-header">
-        Hi there Jolt
+          <List locations = {tmpLocations}></List>
       </header>
     </div>
   );
