@@ -27,9 +27,16 @@ function App() {
     return (
     <div className="App">
       <header className="App-header">
+          <div className="App-content">
           {/*<MapDisplay handleListChange = { handleListChange } />*/}
-          <MapDisplay/>
-          <List locations = {locations} />
+              <div className="google-map">
+                  <MapDisplay/>
+              </div>
+              <div>
+                  <button onClick={handleListChange}>update locations</button>
+                  <List locations = {locations} />
+              </div>
+          </div>
       </header>
     </div>
   );
