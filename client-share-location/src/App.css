@@ -27,3 +27,14 @@
 .App-content {
   display: flex;
 }
+
+/*.google-map {*/
+  /*position: relative;*/
+/*}*/
+
+/*MapDisplay {*/
+  /*position: absolute;*/
+  /*left: 50%;*/
+  /*top: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+/*}*/
