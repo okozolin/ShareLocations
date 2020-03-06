@@ -7,7 +7,23 @@ import {GoogleApiWrapper} from "google-maps-react";
 
 function App() {
 
-    const tmpLocations = ['Tel Aviv', 'Ramat Gan', 'Jerusalem']
+    const tmpLocations = [
+        {
+            text: 'Tel Aviv',
+            lat: 32.0522381,
+            lng: 34.7704602
+        },
+        {
+            text: 'Ramat Gan',
+            lat: 32.0861836,
+            lng: 34.8076522
+        },
+        {
+            text: 'Jerusalem',
+            lat: 31.7767861,
+            lng: 35.2033057
+        }
+    ]
 
     const [locations, setLocations] = useState([]);
 
@@ -26,18 +42,14 @@ function App() {
 
     return (
     <div className="App">
-      <header className="App-header">
-          <div className="App-content">
-          {/*<MapDisplay handleListChange = { handleListChange } />*/}
-              <div className="google-map">
-                  <MapDisplay/>
-              </div>
-              <div>
-                  <button onClick={handleListChange}>update locations</button>
-                  <List locations = {locations} />
-              </div>
+        {/*<MapDisplay handleListChange = { handleListChange } />*/}
+          <div className="google-map">
+              <MapDisplay/>
           </div>
-      </header>
+          <div>
+              <button onClick={handleListChange}>update locations</button>
+              <List locations = {locations} />
+          </div>
     </div>
   );
 }

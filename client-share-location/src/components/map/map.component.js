@@ -1,10 +1,9 @@
-
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const mapStyles = {
-    width: '100%',
-    height: '100%'
+    width: '50%',
+    height: '50%'
 };
 
 export class MapDisplay extends Component {
@@ -19,7 +18,9 @@ export class MapDisplay extends Component {
                     lat: 32.0522381,
                     lng: 34.7704602
                 }}
-            />
+            >
+                <Marker position={{ lat: 32.0519904, lng: 34.7722956}} />
+            </Map>
         );
     }
 }
