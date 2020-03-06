@@ -2,8 +2,7 @@ import React, { useCallback, useState} from 'react';
 import {List} from "./components/list/list.component";
 
 import './App.css';
-import MapDisplay from "./components/map/map.component";
-import {GoogleApiWrapper} from "google-maps-react";
+import MapDisplay  from "./components/map/map.component";
 
 function App() {
 
@@ -42,14 +41,9 @@ function App() {
 
     return (
     <div className="App">
-        {/*<MapDisplay handleListChange = { handleListChange } />*/}
-          <div className="google-map">
-              <MapDisplay/>
-          </div>
-          <div>
+              <MapDisplay locations = {locations}/>
               <button onClick={handleListChange}>update locations</button>
               <List locations = {locations} />
-          </div>
     </div>
   );
 }

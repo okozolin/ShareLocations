@@ -9,17 +9,21 @@ export const List = ({locations}) => {
             <h2>Please mark a location on the map</h2> :
 
             <table>
-            <tr>
-            <th>Text</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-            </tr>
-            {locations.map(item =>
-                <tr key = { item }>
-                    <td>{ item.text }</td>
-                    <td>{ item.lat }</td>
-                    <td>{ item.lng }</td>
-                </tr>)}
+                <thead>
+                    <tr>
+                        <th>Marker</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {locations.map((item, index) =>
+                        <tr key = { index }>
+                            <td>{ item.text }</td>
+                            <td>{ item.lat }</td>
+                            <td>{ item.lng }</td>
+                        </tr>)}
+                </tbody>
             </table>
         }
         </div>
