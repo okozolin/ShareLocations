@@ -47,7 +47,7 @@ const MapDisplay = (props) => {
                        key={i}
                        lat={marker.lat}
                        lng={marker.lng}
-                       name={marker.text}
+                       title={marker.text}
                        color="red"
                    />
                 )}

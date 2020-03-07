@@ -2,12 +2,14 @@ import React from 'react';
 import './map.component.css';
 
 const Marker = (props) => {
-    const { color, name, id } = props;
+    console.log("marker comp props", props)
+    const { color, title, id } = props;
     return (
         <div className="marker"
              style={{ backgroundColor: color, cursor: 'pointer'}}
-             title={name}
-        />
+             title={title}
+        >
+        </div>
     );
 };
 
